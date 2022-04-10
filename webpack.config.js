@@ -46,6 +46,7 @@ module.exports = {
       remotes: {},
       exposes: {
         './Button': './src/Button',
+        './Basket': './src/Basket',
       },
       shared: {
         ...deps,

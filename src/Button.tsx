@@ -13,7 +13,7 @@ type Props = {
 const Button: FC<Props> = ({ itemId }) => {
   return (
     <button
-      className="border-2 border-gray-700 rounded-lg px-2"
+      className="border-2 border-gray-600 hover:border-black rounded-lg px-2"
       onClick={() => dispatchEvent(new Event('checkout:product-added'))}
     >
       Buy for {prices[itemId]} €

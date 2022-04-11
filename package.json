@@ -1,7 +1,7 @@
 {
-  "name": "react-mfe-base",
-  "version": "0.0.0",
-  "description": "Base project for React micro front-ends.",
+  "name": "react-mfe-checkout",
+  "version": "1.0.0",
+  "description": "Checkout team example from micro-frontends.org with React.",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "build:dev": "webpack --config webpack.dev.js",

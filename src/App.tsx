@@ -1,14 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { Component } from 'react'
+import './styles.css'
 
-import "./index.scss";
-
-const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: react-mfe-checkout</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Tailwind</div>
-  </div>
-);
-ReactDOM.render(<App />, document.getElementById("app"));
+export default class App extends Component {
+  render() {
+    return <p>Hello from Checkout Team!</p>
+  }
+}

@@ -26,7 +26,7 @@ module.exports = merge(common, {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'http://localhost:8080/',
+    publicPath: 'https://checkout.react-mfe.zydhan.com/',
   },
   optimization: {
     minimize: true,

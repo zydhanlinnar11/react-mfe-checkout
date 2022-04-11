@@ -1,25 +1,33 @@
-import React, { useEffect, useState } from 'react'
+import React, { Component } from 'react'
 import clsx from 'clsx'
 
-const Basket = () => {
-  const [itemCount, setItemCount] = useState(0)
+type State = { itemCount: number }
 
-  useEffect(() => {
+export class Basket extends Component<any, State> {
+  constructor(props: any) {
+    super(props)
+    this.state = { itemCount: 0 }
+  }
+
+  componentDidMount() {
     addEventListener('checkout:product-added', () =>
-      setItemCount((prevCount) => prevCount + 1)
+      this.setState(({ itemCount }) => ({ itemCount: itemCount + 1 }))
     )
-  }, [])
+  }
 
-  return (
-    <div
-      className={clsx(
-        'text-base rounded-lg max-w-max px-3'.split(' '),
-        itemCount > 0 ? 'bg-green-500' : 'bg-gray-500'
-      )}
-    >
-      Basket: {itemCount} item{itemCount !== 1 ? 's' : ''}
-    </div>
-  )
+  render() {
+    return (
+      <div
+        className={clsx(
+          'text-base rounded-lg max-w-max px-3'.split(' '),
+          this.state.itemCount > 0 ? 'bg-green-500' : 'bg-gray-500'
+        )}
+      >
+        Basket: {this.state.itemCount} item
+        {this.state.itemCount !== 1 ? 's' : ''}
+      </div>
+    )
+  }
 }
 
 export default Basket

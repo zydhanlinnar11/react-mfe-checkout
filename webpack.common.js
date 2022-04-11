@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'react_mfe_base',
-      filename: 'mfeEntry.js',
+      filename: 'remoteEntry.js',
       remotes: {},
       exposes: {
         './Button': './src/components/elements/Button',
